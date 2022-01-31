@@ -31,12 +31,12 @@ jobs:
     - run: npm test
 
     - name: create deploy folder
-        run: |
-          mkdir deploy
-          cp package.json deploy
-          cp -r server deploy
-          mkdir deploy/client
-          cp -r client/build deploy/client
+      run: |
+        mkdir deploy
+        cp package.json deploy
+        cp -r server deploy
+        mkdir deploy/client
+        cp -r client/build deploy/client
     
     - name: upload ci artifact
       uses: actions/upload-artifact@v2
